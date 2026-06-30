@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع حسنين للسكربتات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="home-page" class="container">
+        <h1>موقع حسنين</h1>
+        <p class="subtitle">المكان الأفضل لتحويل وتخزين سكربتات روبلوكس</p>
+        <button id="go-to-create" class="btn">ابدأ بإنشاء سكربت جديد</button>
+    </div>
+
+    <div id="create-page" class="container hidden">
+        <h2>منشئ روابط Raw الذكية</h2>
+        <div class="input-group">
+            <label for="script-input">ضع السكربت الخاص بك هنا (Lua, Luau, TXT):</label>
+            <textarea id="script-input" placeholder="-- ضع كود روبلوكس هنا..." dir="ltr"></textarea>
+        </div>
+        <button id="save-btn" class="btn">احفظ السكربت</button>
+
+        <div id="result-section" class="hidden">
+            <h3>تم توليد رابط Raw بنجاح!</h3>
+            <p>يمكنك الآن نسخه واستخدامه داخل Delta أو أي منفذ آخر:</p>
+            <div class="output-box">
+                <input type="text" id="raw-url" readonly>
+                <button id="copy-btn">نسخ الرابط</button>
+            </div>
+        </div>
+        
+        <button id="back-to-home" class="btn-secondary">العودة للرئيسية</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
